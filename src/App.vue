@@ -1,6 +1,12 @@
 <script setup lang="ts">
+import Dropdown from './components/Dropdown.vue';
+import DropdownContent from './components/DropdownContent.vue';
+import DropdownItem from './components/DropdownItem.vue';
 import Form from './components/Form.vue';
 import FormWithInput from './components/FormWithInput.vue';
+
+const makeAlert = (message: string) => alert(message)
+
 </script>
 
 <template>
@@ -13,6 +19,19 @@ import FormWithInput from './components/FormWithInput.vue';
         <div class="wrapper__item">
             <h2>Form With Input Component</h2>
             <FormWithInput />
+        </div>
+        <div class="wrapper__item">
+            <h2>Dropdown</h2>
+            <Dropdown>
+                <template #toggler>
+                    <button>Open Dropdown</button>
+                </template>
+                <DropdownContent>
+                    <DropdownItem @action="makeAlert" :child-number="1">Some action</DropdownItem>
+                    <DropdownItem @action="makeAlert" :child-number="2">Some action</DropdownItem>
+                    <DropdownItem @action="makeAlert" :child-number="3">Some action</DropdownItem>
+                </DropdownContent>
+            </Dropdown>
         </div>
     </div>
 </template>
