@@ -44,7 +44,7 @@ describe("Form", () => {
 
     await wrapper.find("form").trigger("submit.prevent");
 
-    // console.log(wrapper.emitted());
+    // console.log(wrapper.emitted()); why it doesn't work? it doesn't return emit
 
     expect(firstNameInput.element.value).toBe("");
     expect(secondNameInput.element.value).toBe("");

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 import Dropdown from './components/Dropdown.vue';
 import DropdownContent from './components/DropdownContent.vue';
 import DropdownItem from './components/DropdownItem.vue';
@@ -26,11 +27,13 @@ const makeAlert = (message: string) => alert(message)
                 <template #toggler>
                     <button>Open Dropdown</button>
                 </template>
-                <DropdownContent>
-                    <DropdownItem @action="makeAlert" :child-number="1">Some action</DropdownItem>
-                    <DropdownItem @action="makeAlert" :child-number="2">Some action</DropdownItem>
-                    <DropdownItem @action="makeAlert" :child-number="3">Some action</DropdownItem>
-                </DropdownContent>
+                <template #content="{ close }">
+                    <DropdownContent :close="close">
+                        <DropdownItem @action="makeAlert" :child-number="1">Some action</DropdownItem>
+                        <DropdownItem @action="makeAlert" :child-number="2">Some action</DropdownItem>
+                        <DropdownItem @action="makeAlert" :child-number="3">Some action</DropdownItem>
+                    </DropdownContent>
+                </template>
             </Dropdown>
         </div>
     </div>

@@ -1,9 +1,13 @@
 <script setup lang="ts">
 
+import { default as vClickOutside } from '../directives/clickOutside'
+
+const { close } = defineProps<{ close: () => void }>()
+
 </script>
 
 <template>
-    <ul class="dropdown-content">
+    <ul class="dropdown-content" v-click-outside="close">
         <slot />
     </ul>
 </template>

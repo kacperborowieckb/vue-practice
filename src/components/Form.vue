@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 import { ref } from 'vue';
 
 type User = { firstName: string, secondName: string }[]
@@ -11,6 +12,7 @@ const handleSubmit = () => {
     users.value.push({ firstName: firstName.value, secondName: secondName.value })
     firstName.value = secondName.value = ''
 }
+
 </script>
 
 <template>

@@ -13,7 +13,7 @@ const toggle = () => isOpen.value = !isOpen.value
         <slot name="toggler" />
     </div>
     <Transition>
-        <slot v-if="isOpen" />
+        <slot v-if="isOpen" :close="toggle" name="content" />
     </Transition>
 </template>
 

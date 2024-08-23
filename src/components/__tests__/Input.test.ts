@@ -33,7 +33,6 @@ describe("Input Component", () => {
   });
 
   it("Should be empty at first", () => {
-    console.log(input.element.value);
     expect(input.element.value).toBe("");
   });
 
