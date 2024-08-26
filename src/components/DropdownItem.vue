@@ -6,10 +6,10 @@
 
 <script setup lang="ts">
 
-const { childNumber } = defineProps<{ childNumber: number }>()
+const props = defineProps<{ childNumber: number }>()
 const emit = defineEmits(["action"])
 
-const handleActionClick = () => emit("action", `Message from child nr.${childNumber}`)
+const handleActionClick = () => emit("action", `Message from child nr.${props.childNumber}`)
 
 </script>
 

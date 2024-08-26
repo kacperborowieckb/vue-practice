@@ -1,5 +1,5 @@
 <template>
-    <ul class="dropdown-content" v-click-outside="close">
+    <ul class="dropdown-content" v-click-outside="props.close">
         <slot />
     </ul>
 </template>
@@ -8,7 +8,7 @@
 
 import { vClickOutside } from '../directives/clickOutside'
 
-const { close } = defineProps<{ close: () => void }>()
+const props = defineProps<{ close: () => void }>()
 
 </script>
 

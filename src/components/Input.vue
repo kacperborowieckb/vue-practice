@@ -1,11 +1,11 @@
 <template>
-    <input :class="className" type="text" :placeholder="placeholder" v-model="model" />
+    <input :class="props.className" type="text" :placeholder="props.placeholder" v-model="model" />
 </template>
 
 
 <script setup lang="ts">
 
 const model = defineModel<string>({ required: true });
-const { placeholder, className } = defineProps<{ placeholder: string, className: string }>()
+const props = defineProps<{ placeholder: string, className: string }>()
 
 </script>
