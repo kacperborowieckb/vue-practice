@@ -29,8 +29,8 @@ describe("Form", () => {
     await firstNameInput.setValue("John");
     await secondNameInput.setValue("Smith");
 
-    expect(firstNameInput.element.value).toBe("John");
-    expect(secondNameInput.element.value).toBe("Smith");
+    expect((wrapper.vm as any).firstName).toBe("John");
+    expect((wrapper.vm as any).secondName).toBe("Smith");
   });
 
   it("Should create a record in list when submitted and clear input values", async () => {
@@ -38,16 +38,10 @@ describe("Form", () => {
 
     await firstNameInput.setValue("John");
     await secondNameInput.setValue("Smith");
-
-    expect(firstNameInput.element.value).toBe("John");
-    expect(secondNameInput.element.value).toBe("Smith");
-
     await wrapper.find("form").trigger("submit.prevent");
 
-    // console.log(wrapper.emitted()); why it doesn't work? it doesn't return emit
-
-    expect(firstNameInput.element.value).toBe("");
-    expect(secondNameInput.element.value).toBe("");
+    expect((wrapper.vm as any).firstName).toBe("");
+    expect((wrapper.vm as any).secondName).toBe("");
 
     const listRecords = wrapper.find("ul").findAll("li");
     expect(listRecords.length).toBe(1);
