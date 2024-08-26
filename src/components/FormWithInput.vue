@@ -6,7 +6,7 @@
         <button class="form__button" type="submit">Submit</button>
     </form>
     <ul class="user-list">
-        <li class="user-list__item" v-for="user in users" :key="user.firstName">
+        <li class="user-list__item" v-for="user in users" :key="user.firstName + user.secondName">
             {{ `${user.firstName} ${user.secondName}` }}
         </li>
     </ul>
