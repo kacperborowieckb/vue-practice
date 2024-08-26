@@ -1,3 +1,16 @@
+<template>
+    <form class="form" @submit.prevent="handleSubmit">
+        <input class="form__input" type="text" v-model="firstName">
+        <input class="form__input" type="text" v-model="secondName">
+        <button class="form__button" type="submit">Submit</button>
+    </form>
+    <ul class="user-list">
+        <li class="user-list__item" v-for="user in users" :key="user.firstName">
+            {{ `${user.firstName} ${user.secondName}` }}
+        </li>
+    </ul>
+</template>
+
 <script setup lang="ts">
 
 import { ref } from 'vue';
@@ -14,19 +27,6 @@ const handleSubmit = () => {
 }
 
 </script>
-
-<template>
-    <form class="form" @submit.prevent="handleSubmit">
-        <input class="form__input" type="text" v-model="firstName">
-        <input class="form__input" type="text" v-model="secondName">
-        <button class="form__button" type="submit">Submit</button>
-    </form>
-    <ul class="user-list">
-        <li class="user-list__item" v-for="user in users" :key="user.firstName">
-            {{ `${user.firstName} ${user.secondName}` }}
-        </li>
-    </ul>
-</template>
 
 <style lang="scss" scoped>
 .form {

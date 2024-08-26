@@ -1,3 +1,12 @@
+<template>
+    <div @click="toggle">
+        <slot name="toggler" />
+    </div>
+    <Transition>
+        <slot v-if="isOpen" :close="toggle" name="content" />
+    </Transition>
+</template>
+
 <script setup lang="ts">
 
 import { ref } from 'vue';
@@ -7,15 +16,6 @@ const isOpen = ref(false)
 const toggle = () => isOpen.value = !isOpen.value
 
 </script>
-
-<template>
-    <div @click="toggle">
-        <slot name="toggler" />
-    </div>
-    <Transition>
-        <slot v-if="isOpen" :close="toggle" name="content" />
-    </Transition>
-</template>
 
 <style lang="scss" scoped>
 .v-enter-active,

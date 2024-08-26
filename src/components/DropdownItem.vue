@@ -1,3 +1,9 @@
+<template>
+    <li class="dropdown-item" @click="makeAction">
+        <slot />
+    </li>
+</template>
+
 <script setup lang="ts">
 
 const { childNumber } = defineProps<{ childNumber: number }>()
@@ -7,11 +13,6 @@ const makeAction = () => emit("action", `Message from child nr.${childNumber}`)
 
 </script>
 
-<template>
-    <li class="dropdown-item" @click="makeAction">
-        <slot />
-    </li>
-</template>
 
 <style lang="scss" scoped>
 .dropdown-item {

@@ -1,15 +1,3 @@
-<script setup lang="ts">
-
-import Dropdown from './components/Dropdown.vue';
-import DropdownContent from './components/DropdownContent.vue';
-import DropdownItem from './components/DropdownItem.vue';
-import Form from './components/Form.vue';
-import FormWithInput from './components/FormWithInput.vue';
-
-const makeAlert = (message: string) => alert(message)
-
-</script>
-
 <template>
     <h1>Vue Practice</h1>
     <div class="wrapper">
@@ -42,6 +30,18 @@ const makeAlert = (message: string) => alert(message)
         </div>
     </div>
 </template>
+
+<script setup lang="ts">
+
+import Dropdown from './components/Dropdown.vue';
+import DropdownContent from './components/DropdownContent.vue';
+import DropdownItem from './components/DropdownItem.vue';
+import Form from './components/Form.vue';
+import FormWithInput from './components/FormWithInput.vue';
+
+const makeAlert = (message: string) => alert(message)
+
+</script>
 
 <style lang="scss" scoped>
 .wrapper {
