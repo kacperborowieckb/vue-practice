@@ -1,4 +1,5 @@
 <template>
+    <h2>Form</h2>
     <form class="form" @submit.prevent="handleSubmit">
         <input class="form__input" type="text" v-model="firstName">
         <input class="form__input" type="text" v-model="secondName">

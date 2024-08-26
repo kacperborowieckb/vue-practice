@@ -2,11 +2,9 @@
     <h1>Vue Practice</h1>
     <div class="wrapper">
         <div class="wrapper__item">
-            <h2>Form</h2>
             <Form />
         </div>
         <div class="wrapper__item">
-            <h2>Form With Input Component</h2>
             <FormWithInput />
         </div>
         <div class="wrapper__item">

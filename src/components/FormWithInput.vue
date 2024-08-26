@@ -1,4 +1,5 @@
 <template>
+    <h2>Form With Input Component</h2>
     <form class="form" @submit.prevent="handleSubmit">
         <Input v-model="firstName" class-name="form__input" placeholder="First Name" />
         <Input v-model="secondName" class-name="form__input" placeholder="Second Name" />
