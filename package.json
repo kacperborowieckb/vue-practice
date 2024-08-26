@@ -6,15 +6,21 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest"
   },
   "dependencies": {
+    "happy-dom": "^15.0.0",
     "vue": "^3.4.37"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.2",
+    "@vue/test-utils": "^2.4.0-alpha.2",
+    "sass": "^1.77.8",
+    "sass-loader": "^16.0.1",
     "typescript": "^5.5.3",
     "vite": "^5.4.1",
+    "vitest": "^2.0.5",
     "vue-tsc": "^2.0.29"
   }
 }
