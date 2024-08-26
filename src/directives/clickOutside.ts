@@ -4,7 +4,7 @@ interface HTMLElementWithClickOutside extends HTMLElement {
   clickOutsideEvent: (e: MouseEvent) => void;
 }
 
-const clickOutside = {
+export const vClickOutside = {
   mounted: (
     element: HTMLElementWithClickOutside,
     binding: DirectiveBinding
@@ -28,5 +28,3 @@ const clickOutside = {
     document.removeEventListener("click", element.clickOutsideEvent);
   },
 };
-
-export default clickOutside;

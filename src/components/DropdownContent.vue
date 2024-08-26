@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 
-import { default as vClickOutside } from '../directives/clickOutside'
+import { vClickOutside } from '../directives/clickOutside'
 
 const { close } = defineProps<{ close: () => void }>()
 

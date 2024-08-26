@@ -24,7 +24,8 @@ const users = ref<User>([])
 
 const handleSubmit = () => {
     users.value.push({ firstName: firstName.value, secondName: secondName.value })
-    firstName.value = secondName.value = ''
+    firstName.value = ''
+    secondName.value = ''
 }
 
 </script>

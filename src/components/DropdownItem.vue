@@ -1,5 +1,5 @@
 <template>
-    <li class="dropdown-item" @click="makeAction">
+    <li class="dropdown-item" @click="handleActionClick">
         <slot />
     </li>
 </template>
@@ -9,7 +9,7 @@
 const { childNumber } = defineProps<{ childNumber: number }>()
 const emit = defineEmits(["action"])
 
-const makeAction = () => emit("action", `Message from child nr.${childNumber}`)
+const handleActionClick = () => emit("action", `Message from child nr.${childNumber}`)
 
 </script>
 
