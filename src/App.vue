@@ -26,11 +26,16 @@
                 </template>
             </Dropdown>
         </div>
+        <div class="wrapper__item">
+            <h2>Automated Dropdown</h2>
+            <AutomatedDropdown :items="dropdownData" />
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
 
+import AutomatedDropdown from './components/AutomatedDropdown.vue';
 import Dropdown from './components/Dropdown.vue';
 import DropdownContent from './components/DropdownContent.vue';
 import DropdownItem from './components/DropdownItem.vue';
@@ -38,6 +43,8 @@ import Form from './components/Form.vue';
 import FormWithInput from './components/FormWithInput.vue';
 
 const makeAlert = (message: string) => alert(message)
+
+const dropdownData = [{ content: 'First item', actionData: "Message From First Item" }, { content: "Second item", actionData: "Message From Second Item" }]
 
 </script>
 
